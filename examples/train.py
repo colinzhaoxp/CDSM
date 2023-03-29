@@ -111,9 +111,9 @@ def get_test_loader(dataset, height, width, batch_size, workers, testset=None):
 
 def create_model(args):
     model = models.create(args.arch, num_features=args.features, norm=True, dropout=args.dropout,
-                          num_classes=0, pooling_type=args.pooling_type, mlp=args.mlp)
+                          num_classes=0, pooling_type=args.pooling_type)
     model_ema = models.create(args.arch, num_features=args.features, norm=True, dropout=args.dropout,
-                              num_classes=0, pooling_type=args.pooling_type, mlp=args.mlp)
+                              num_classes=0, pooling_type=args.pooling_type)
 
     # Load from checkpoint
     if args.resume:
